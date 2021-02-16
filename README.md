@@ -1,6 +1,8 @@
 # redes-neurais-artificiais-python
 Respositório dos exemplos desenvolvidos em um curso de redes neurais na Udemy.
 
+> Link para o curso, [aqui](https://www.udemy.com/course/redes-neurais-artificiais-em-python/)
+
 - Instalando as dependências
 ```
 pip install -r requirements.txt
