@@ -1,6 +1,6 @@
 """
-Treinando uma rede que aprenda a tabela AND, com ajustes automáticos
-de pesos.
+Treinando uma rede que aprenda a tabela AND, e a tabela OR, porém não consegue
+aprender a tabela XOR.
 """
 import numpy as np
 
@@ -30,13 +30,24 @@ def treinar():
             for j in range(len(pesos)):
                 pesos[j] = pesos[j] + (taxa_aprendizagem * entradas[i][j] * erro)
                 print("Peso atualizado: {}".format(str(pesos[j])))
+        print(f"Total de erros: {erro_total}")
 
 
+# Entradas
 entradas = np.array([[0, 0], [0, 1], [1, 0], [1, 1]])
-# Definir na saída os resultados da tabela AND para cada item de entrada
+# Tabela AND
 saidas = np.array([0, 0, 0, 1])
+# Tabela OR
+# saidas = np.array([0, 1, 1, 1])
+# Tabela XOR
+# saidas = np.array([0, 1, 1, 0])
+
 pesos = np.array([0.0, 0.0])
 taxa_aprendizagem = 0.1
 
-
 treinar()
+print("Rede neural treinada")
+print(calcula_saida(entradas[0]))
+print(calcula_saida(entradas[1]))
+print(calcula_saida(entradas[2]))
+print(calcula_saida(entradas[3]))

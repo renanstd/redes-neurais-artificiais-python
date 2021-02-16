@@ -69,3 +69,9 @@ pip install -r requirements.txt
     - `erro = resposta_correta - resposta_calculada`
 - Definições de novos pesos
     - `peso(n+1) = peso(n) + (taxa_aprendizagem * entrada * erro)`
+
+## Limitações perceptron 1 camada
+
+- Ele consegue resolver somente problemas lineramente separáveis (aula 17)
+- Por isso ele conseguiu aprender a tabela `AND`, tabela `OR`, mas não a tabela `XOR`
+- Para trabalharmos com problemas **não linearmente separáveis**, precisamos adicionar mais **camadas** a nossa rede
