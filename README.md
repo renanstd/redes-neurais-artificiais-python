@@ -10,8 +10,6 @@ pip install -r requirements.txt
 
 ## Anotações
 
-- Parei na aula 15
-
 - Redes neurais se aplicam somente em casos onde você tem **muitos dados** e problemas **complexos**
 - "Imitar" o sistema nervoso de humanos no processo de aprendizagem
 - Inspirada em redes neurais biológicas, principalmente na troca de informações
@@ -75,3 +73,83 @@ pip install -r requirements.txt
 - Ele consegue resolver somente problemas lineramente separáveis (aula 17)
 - Por isso ele conseguiu aprender a tabela `AND`, tabela `OR`, mas não a tabela `XOR`
 - Para trabalharmos com problemas **não linearmente separáveis**, precisamos adicionar mais **camadas** a nossa rede
+
+# Redes multicamadas
+
+![rede multicamada](https://github.com/renanstd/redes-neurais-artificiais-python/blob/main/images/multicamadas.png)
+
+- Fornece um valor de entrada, a rede processa e retorna uma resposta *(feed forward)*
+- O neurônio é ativado somente se o valor for maior que um limiar
+
+## Funções de ativação
+
+- **Step (função degrau):** Retorna 0 ou 1
+- **Sigmoid (função sigmoide):** Retorna entre 0 e 1 (não retorna valores negativos)
+- **Hyperbolic tangent (função tangente hiperbólica):** Retorna entre -1 e 1
+
+[Mais informações](https://en.wikipedia.org/wiki/Activation_function)
+
+## Fluxo
+
+![rede multicamada](https://github.com/renanstd/redes-neurais-artificiais-python/blob/main/images/fluxo.png)
+
+- Inicializa os pesos com valores aleatórios
+- Baseado nos dados (aprendizagem supervisionada), realiza os cálculos com os pesos e calcula o erro
+- Calcula as mudanças nos pesos e os atualiza *(backpropagation)*
+- O algoritmo termina quando o erro é **pequeno**
+- Em outras literaturas, *Cost function* é a **função de erro**
+
+## Descida do gradiente (gradient descent)
+
+- Encontrar a combinação de pesos que o erro é o menor possível
+    - Força bruta
+    - Simmulated anealing
+    - Algoritmos genéticos
+- Gradiente é calculado para saber **quanto ajustar os pesos**
+    - Mínimos locais
+    - Mínimos globais
+- Calcular o declive da curva com **derivadas parciais**
+    - Cálculo de derivadas parciais: **y * (1 - y)**, onde y é o resultado da **sigmóide**
+
+A **derivada** serve para descobrir para qual lado um peso deve "pender", afim de encontrar o **mínimo global**
+
+![derivada parcial](https://github.com/renanstd/redes-neurais-artificiais-python/blob/main/images/derivada.png)
+
+## Cálculo do delta
+
+Fluxo de cálculos:
+- Função ativação
+- Derivada da função
+- Delta
+- Gradiente
+
+É necessário calcular o delta da camada **oculta** e da camada de **saída**
+
+Fórmula do delta para a camada de **saída**
+```
+delta_saida = erro * derivada_sigmoide
+```
+
+Fórmula do delta para a camada **oculta**
+```
+delta_oculta = derivada_sigmoide * peso_camada_seguinte * delta_saida
+```
+
+## Backpropagation
+
+Fórmula
+```
+peso = (peso * momento) + (entrada * delta * taxa_de_aprendizagem)
+```
+
+### Parâmetros
+
+- Taxa aprendizagem (learning rate)
+    - Define o quão "rápido" um algoritmo vai aprender
+    - **Alto:** A convergência é rápida, mas pode perder o mínimo global
+    - **Baixo:** Será mais lento, mas tem mais chances de chegar no mínimo global
+- Momento (momentum)
+    - Escapar de mínimos locais (nem sempre funciona)
+    - Define o quão confiável é a última alteração
+    - **Alto:** Aumenta a velocidade da convergência
+    - **Baixo:** Pode evitar mínimos locais
