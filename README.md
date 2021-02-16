@@ -28,7 +28,7 @@ pip install -r requirements.txt
 
 ## Neurônio artificial
 
-![neurônio artificial]()
+![neurônio artificial](https://github.com/renanstd/redes-neurais-artificiais-python/blob/main/images/neuronio_artificial.png)
 
 - Entradas, e pesos (weight)
 - Função soma
@@ -36,7 +36,7 @@ pip install -r requirements.txt
 
 ### Função soma:
 
-![função soma]()
+![função soma](https://github.com/renanstd/redes-neurais-artificiais-python/blob/main/images/funcao_soma.png)
 
 - `X` são entradas
 - `W` são pesos
