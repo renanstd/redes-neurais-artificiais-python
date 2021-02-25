@@ -156,4 +156,4 @@ peso = (peso * momento) + (entrada * delta * taxa_de_aprendizagem)
 
 ## Output
 
-![output]("https://github.com/renanstd/redes-neurais-artificiais-python/blob/main/images/result.png")
+![output](https://github.com/renanstd/redes-neurais-artificiais-python/blob/main/images/result.png)
