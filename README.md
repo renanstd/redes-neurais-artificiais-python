@@ -153,3 +153,7 @@ peso = (peso * momento) + (entrada * delta * taxa_de_aprendizagem)
     - Define o quão confiável é a última alteração
     - **Alto:** Aumenta a velocidade da convergência
     - **Baixo:** Pode evitar mínimos locais
+
+## Output
+
+![output]("https://github.com/renanstd/redes-neurais-artificiais-python/blob/main/images/result.png)
