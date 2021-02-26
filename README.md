@@ -154,6 +154,38 @@ peso = (peso * momento) + (entrada * delta * taxa_de_aprendizagem)
     - **Alto:** Aumenta a velocidade da convergência
     - **Baixo:** Pode evitar mínimos locais
 
-## Output
+## Output rede_multicamada/exemplo_01
 
 ![output](https://github.com/renanstd/redes-neurais-artificiais-python/blob/main/images/result.png)
+
+## Conceitos extras
+
+### Bias
+
+- Bias adiciona umm atributo a mais, em cada uma das camadas. Se a rede tem 2 inputs, com bias, ela vai passar a ter 3 inputs, e +1 neurônio na camada oculta.
+- Bias geralmente é usado quando temos 2 inputs de valor zero, com *step function*.
+
+### Erros
+
+- Nas explicações, usamos somente o algoritmo simples: `resposta_correta - resposta_calculada`
+- Média da diferença entre o esperado e o que foi previsto pela rede
+- Erros maiores contam mais que erros menores
+- Penaliza erros maiores
+
+### Mean Square Error (MSE)
+
+- Tem como valor de erro o resultado dessa fórmula:
+
+![mse](https://github.com/renanstd/redes-neurais-artificiais-python/blob/main/images/mse.png)
+
+- Exemplo:
+
+![exemplo mse](https://github.com/renanstd/redes-neurais-artificiais-python/blob/main/images/exemplo_mse.png)
+
+
+### Root Mean Square Error (RMSE)
+
+- Tem como valor de erro a **raíz quadrada** do MSE
+
+![rmse](https://github.com/renanstd/redes-neurais-artificiais-python/blob/main/images/rmse.png)
+
