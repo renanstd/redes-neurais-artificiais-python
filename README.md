@@ -180,7 +180,7 @@ peso = (peso * momento) + (entrada * delta * taxa_de_aprendizagem)
 
 - Exemplo:
 
-![exemplo mse](https://github.com/renanstd/redes-neurais-artificiais-python/blob/main/images/exemplo_mse.png)
+![exemplo mse](https://github.com/renanstd/redes-neurais-artificiais-python/blob/main/images/mse_exemplo.png)
 
 
 ### Root Mean Square Error (RMSE)
