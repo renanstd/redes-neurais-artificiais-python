@@ -189,3 +189,11 @@ peso = (peso * momento) + (entrada * delta * taxa_de_aprendizagem)
 
 ![rmse](https://github.com/renanstd/redes-neurais-artificiais-python/blob/main/images/rmse.png)
 
+## Deep learning
+
+- Deep learning, é quando temos **duas ou mais** camadas ocultas
+- Utiliza outras técnicas para trabalhar com elas, as técnicas ensinadas neste curso não se aplicam
+- *Vanish gradient problem*
+- Utiliza outras funções de ativação, além da *step* e a *sigmóide* vistas neste curso
+- Utiliza GPU
+
